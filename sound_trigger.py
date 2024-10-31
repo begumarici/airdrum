@@ -2,6 +2,7 @@ import pygame
 
 class SoundTrigger:
     def __init__(self):
+        pygame.mixer.pre_init(44100, -16, 2, 512)  
         pygame.mixer.init()
         self.hi_hat_sound = pygame.mixer.Sound('assets/Closed-Hi-Hat-1.wav')
         self.snare_sound = pygame.mixer.Sound('assets/Ensoniq-ESQ-1-Snare.wav')  

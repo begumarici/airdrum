@@ -11,7 +11,7 @@ class SkeletonDetector:
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         result = self.pose.process(rgb_frame)
         if result.pose_landmarks:
-            # İskeleti ekrana çiz
+           
             self.mp_drawing.draw_landmarks(frame, result.pose_landmarks, self.mp_pose.POSE_CONNECTIONS)
             return result.pose_landmarks
         return None

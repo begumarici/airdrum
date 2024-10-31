@@ -4,7 +4,8 @@ from movement_detector import MovementDetector
 import cv2
 
 def main():
-    cap = cv2.VideoCapture(2) 
+    cap = cv2.VideoCapture(0) 
+    cap.set(cv2.CAP_PROP_FPS, 30)
     detector = SkeletonDetector()
     sound_trigger = SoundTrigger()
     movement_detector = MovementDetector()
@@ -25,7 +26,7 @@ def main():
 
         cv2.imshow('Air Drum', frame)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if cv2.waitKey(5) & 0xFF == ord('q'):
             break
 
     cap.release()
