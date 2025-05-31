@@ -4,7 +4,7 @@ from movement_detector import MovementDetector
 import cv2
 
 def main():
-    cap = cv2.VideoCapture(0) 
+    cap = cv2.VideoCapture(2) 
     cap.set(cv2.CAP_PROP_FPS, 30)
     detector = SkeletonDetector()
     sound_trigger = SoundTrigger()

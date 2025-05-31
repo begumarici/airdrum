@@ -27,9 +27,12 @@ class MovementDetector:
     def detect_movement(self, landmarks):
         right_hand_tip = landmarks.landmark[20]  # Sağ elin en uç kısmı
         left_hand_tip = landmarks.landmark[19]  # Sol elin en uç kısmı
+
         left_toe_tip = landmarks.landmark[31]  # Sol ayak ucu
+
         left_shoulder = landmarks.landmark[11]  # Sol omuz
         right_shoulder = landmarks.landmark[12]  # Sağ omuz
+        
         left_hip = landmarks.landmark[23]  # Sol kalça
         right_hip = landmarks.landmark[24]  # Sağ kalça
 
